@@ -13,9 +13,9 @@ const AppHomeNeuronSection: React.FC = () => {
       alignItems="center"
       gap={{ xs: 0, md: 4 }}
       py={4}
-      spacing={2}
+      spacing={4}
       sx={{
-        height: "100vh",
+        height: { xs: "auto", md: "100vh" },
         justifyContent: { xs: "flex-start", md: "space-around" },
       }}
     >
@@ -38,18 +38,19 @@ const AppHomeNeuronSection: React.FC = () => {
         justifyContent={"space-between"}
         alignContent={"space-between"}
         width={"100%"}
+        py={{ xs: 9, md: 0 }}
         sx={{
           height: { xs: "100%", md: "auto" },
         }}
       >
+        {/* Only for desktop view */}
         <Grid
           size={{ xs: 12, md: 3 }}
           justifyContent="center"
           sx={{
             height: { md: "100%" },
-            display: "flex",
             alignItems: "center",
-            order: { xs: 3, md: 1 }, // Swap position on mobile
+            display: { xs: "none", md: "flex" },
           }}
         >
           <Box
@@ -86,7 +87,6 @@ const AppHomeNeuronSection: React.FC = () => {
 
         <Grid
           size={{ xs: 12, md: 6 }}
-          order={2}
           sx={{
             height: { md: "100%" },
             display: "flex",
@@ -96,16 +96,17 @@ const AppHomeNeuronSection: React.FC = () => {
           <AppNeuronsSlideShow />
         </Grid>
 
+        {/* Only for desktop view */}
         <Grid
           size={{ xs: 12, md: 3 }}
           sx={{
             height: { md: "100%" },
-            display: "flex",
+            display: { xs: "none", md: "flex" },
             alignItems: "center",
             order: { xs: 1, md: 3 }, // Swap position on mobile
           }}
         >
-          <AppQuotes title="Connetion" author="Brené Brown">
+          <AppQuotes title="CONNECTION." author="BRENE BROWN">
             <Typography
               variant="body1"
               sx={{ maxWidth: "600px", mx: "auto", color: "primary.main" }}
@@ -115,21 +116,39 @@ const AppHomeNeuronSection: React.FC = () => {
                 component="span"
                 sx={{ fontStyle: "italic", fontWeight: "bold" }}
               >
-                seen
+                <Typography
+                  variant="body1Quotes"
+                  color="primary.main"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  seen
+                </Typography>
               </Box>{" "}
               and{" "}
               <Box
                 component="span"
                 sx={{ fontStyle: "italic", fontWeight: "bold" }}
               >
-                valued
+                <Typography
+                  variant="body1Quotes"
+                  color="primary.main"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  valued
+                </Typography>
               </Box>{" "}
               and{" "}
               <Box
                 component="span"
                 sx={{ fontStyle: "italic", fontWeight: "bold" }}
               >
-                heard
+                <Typography
+                  variant="body1Quotes"
+                  color="primary.main"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  heard
+                </Typography>
               </Box>
               .
             </Typography>

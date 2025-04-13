@@ -22,8 +22,23 @@ declare module '@mui/material/styles' {
     interface PaletteOptions {
         quotesPink?: PaletteOptions['primary'];
     }
+
+    interface TypographyVariants {
+        body1Quotes: React.CSSProperties;
+    }
+
+    interface TypographyVariantsOptions {
+        body1Quotes: React.CSSProperties;
+    }
+}
+
+declare module '@mui/material/Typography' {
+    interface TypographyPropsVariantOverrides {
+        body1Quotes: true;
+    }
 }
 import { TypographyOptions } from '@mui/material/styles/createTypography';
+
 
 
 
@@ -58,14 +73,13 @@ let defaultTheme = createTheme({
             // dancingScript -> citati
             fontFamily: sourceSerif4.style.fontFamily,
         },
-        body2: {
-            // font size for mobile .6rem
-            '@media (max-width:600px)': {
-                fontSize: '0.6rem',
-            },
-        }
-
+        body1Quotes: {
+            // dancingScript -> citati
+            fontFamily: dancingScript.style.fontFamily,
+            fontSize: '150%',
+        },
     },
+
     palette: {
         primary: {
             main: colors.primary,

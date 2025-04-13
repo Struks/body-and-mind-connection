@@ -13,12 +13,18 @@ const AppQuotes = ({ children, author, title }: AppQuotesProps) => {
     <Stack
       direction="column"
       spacing={4}
-      sx={{ textAlign: "center", mt: 4, maxWidth: "360px", mx: "auto" }}
+      sx={{
+        textAlign: "center",
+        mt: 4,
+        maxWidth: "360px",
+        mx: "auto",
+        opacity: 0.9,
+      }}
     >
       <Box
         component={"div"}
         sx={{
-          backgroundImage: "url('/assets/images/brush-stroke.png')",
+          backgroundImage: "url('/assets/images/brush-stroke-new.png')",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -29,6 +35,8 @@ const AppQuotes = ({ children, author, title }: AppQuotesProps) => {
           variant="h2"
           sx={{
             fontSize: { xs: "18px", sm: "21px", md: "28px" },
+            color: "primary.main",
+            opacity: 1,
           }}
         >
           {title}
@@ -46,11 +54,11 @@ const AppQuotes = ({ children, author, title }: AppQuotesProps) => {
         {children}
 
         <Typography
-          variant="body2"
+          variant="body1"
           sx={{
             mt: 2,
-            fontWeight: "bold",
-            color: "#1a237e",
+            color: "primary.main",
+            opacity: 1,
           }}
         >
           - {author} -
