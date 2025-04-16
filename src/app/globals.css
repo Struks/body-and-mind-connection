@@ -44,6 +44,15 @@ a {
 }
 
 /* * Custom css */
+.opacity-active {
+  opacity: 0.8;
+  position: relative; /* Ensure proper positioning for child elements */
+}
+
+.opacity-active * {
+  opacity: 1;
+  position: relative; /* Prevent inheritance of opacity from parent */
+}
 
 /* * Animacije */
 

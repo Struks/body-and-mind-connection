@@ -2,6 +2,7 @@ import { Box, Stack, Typography, Grid2 as Grid, Link } from "@mui/material";
 import AppContactLink from "./AppContactLink";
 import AppAbout from "./AppAbout";
 import AppQuotes from "../AppHomeNeuronsSection/AppQuotes";
+import opacityActiveStyles from "@/theme/opacityActiveStyles";
 
 const AppHomeAboutSection = () => {
   return (
@@ -76,6 +77,7 @@ const AppHomeAboutSection = () => {
             linkElement?.click();
           }}
           sx={{
+            ...opacityActiveStyles,
             backgroundColor: "quotesPink.main",
             borderRadius: "20px",
             padding: { xs: ".8rem", sm: "1rem", md: "1.5rem" },

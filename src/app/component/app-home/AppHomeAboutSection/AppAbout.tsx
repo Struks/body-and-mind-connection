@@ -1,7 +1,9 @@
 import { Box, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import AppContactLink from "./AppContactLink";
-
 const AppAbout = () => {
+  const theme = useTheme();
+
   return (
     <Box>
       <Box
@@ -11,11 +13,11 @@ const AppAbout = () => {
           backgroundImage: 'url("/assets/images/about-me.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundPositionY: { xs: "-52px", md: "center" },
           width: { xs: "300px", md: "400px" },
           height: { xs: "300px", md: "600px" },
-          border: "10px solid #fff",
-          borderTop: { xs: "10px solid #fff", md: "none" },
-          borderLeft: { xs: "10px solid #fff", md: "none" },
+          borderRight: { xs: "none", md: "10px solid #fff" },
+          borderBottom: { xs: "none", md: "10px solid #fff" },
           borderRadius: { xs: "50%", md: "0" },
           margin: "0 auto",
           marginRight: { xs: "auto", md: 3 },
@@ -27,6 +29,12 @@ const AppAbout = () => {
         // size={{ xs: 12, md: 6 }}
         // textAlign={"left"}
         sx={{
+          [theme.breakpoints.down("md")]: {
+            opacity: ".8",
+            "& *": {
+              opacity: "1",
+            },
+          },
           marginTop: { xs: 3, md: 0 },
           backgroundColor: { xs: "quotesPink.main", md: "unset" },
           borderRadius: { xs: 2, md: 0 },

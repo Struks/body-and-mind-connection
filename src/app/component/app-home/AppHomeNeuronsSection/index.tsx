@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Box, Container, Stack, Link } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+import opacityActiveStyles from "@/theme/opacityActiveStyles";
 
 //* Custom components
 import AppNeuronsSlideShow from "./AppNeuronsSlideShow";
@@ -60,6 +61,7 @@ const AppHomeNeuronSection: React.FC = () => {
               linkElement?.click();
             }}
             sx={{
+              ...opacityActiveStyles,
               backgroundColor: "quotesPink.main",
               borderRadius: "20px",
               padding: { xs: ".8rem", sm: "1rem", md: "1.5rem" },

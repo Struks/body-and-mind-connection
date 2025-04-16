@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Stack, Typography } from "@mui/material";
+import opacityActiveStyles from "@/theme/opacityActiveStyles";
 
 interface AppQuotesProps {
   children: React.ReactNode;
@@ -18,12 +19,12 @@ const AppQuotes = ({ children, author, title }: AppQuotesProps) => {
         mt: 4,
         maxWidth: "360px",
         mx: "auto",
-        opacity: 0.9,
       }}
     >
       <Box
         component={"div"}
         sx={{
+          ...opacityActiveStyles,
           backgroundImage: "url('/assets/images/brush-stroke-new.png')",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -36,7 +37,6 @@ const AppQuotes = ({ children, author, title }: AppQuotesProps) => {
           sx={{
             fontSize: { xs: "18px", sm: "21px", md: "28px" },
             color: "primary.main",
-            opacity: 1,
           }}
         >
           {title}
@@ -46,6 +46,7 @@ const AppQuotes = ({ children, author, title }: AppQuotesProps) => {
       <Box
         component={"div"}
         sx={{
+          ...opacityActiveStyles,
           backgroundColor: "quotesPink.main",
           borderRadius: "20px",
           padding: { xs: ".8rem", sm: "1rem", md: "1.5rem" },
@@ -58,7 +59,6 @@ const AppQuotes = ({ children, author, title }: AppQuotesProps) => {
           sx={{
             mt: 2,
             color: "primary.main",
-            opacity: 1,
           }}
         >
           - {author} -

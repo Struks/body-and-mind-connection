@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Box, useMediaQuery, useTheme, Typography, Link } from "@mui/material";
+import opacityActiveStyles from "@/theme/opacityActiveStyles";
 
 // Prethodno izračunate pozicije za 5 neurona
 const calculatePositions = (radius: number) => {
@@ -205,6 +206,7 @@ const AppNeuronsSlideShow = () => {
               onMouseLeave={() => setHoverIndex(null)} // Resetuje kada miš izađe
               onAnimationEnd={() => setIsTextVisible(true)} // Prikazuje tekst kada se animacija završi
               sx={{
+                ...opacityActiveStyles,
                 position: "absolute",
                 width: 5, // Initial small size
                 height: 5, // Initial small size
