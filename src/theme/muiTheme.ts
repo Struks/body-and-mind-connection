@@ -109,7 +109,7 @@ let defaultTheme = createTheme({
         MuiButton: {
             styleOverrides: {
                 root: {
-                    textTransform: 'none',
+                    color: colors.textPrimary,
                 },
             },
         },

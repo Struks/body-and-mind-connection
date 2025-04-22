@@ -11,8 +11,10 @@ export default function Home() {
     <Box
       component={"div"}
       sx={{
-        backgroundImage: "url('/assets/images/connection-bg-neurons.jpg')",
-
+        backgroundImage: {
+          xs: 'url("/assets/images/connection-bg-neurons-mobile.jpg")',
+          md: 'url("/assets/images/connection-bg-neurons-desktop.jpg")',
+        },
         backgroundSize: "cover",
         backgroundPosition: "top left",
         backgroundAttachment: "fixed",
