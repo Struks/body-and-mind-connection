@@ -1,37 +1,55 @@
 import React from "react";
-import { Typography, Box, Container, Stack, Link } from "@mui/material";
-import Grid from "@mui/material/Grid2";
+import {
+  Typography,
+  Box,
+  Container,
+  Stack,
+  Link,
+  useMediaQuery,
+} from "@mui/material";
+import Grid from "@mui/material/Grid";
+import { useTheme } from "@mui/material/styles";
 import opacityActiveStyles from "@/theme/opacityActiveStyles";
 
 //* Custom components
 import AppNeuronsSlideShow from "./AppNeuronsSlideShow";
 import AppQuotes from "./AppQuotes";
+import AppNeuronsHeaderIcons from "./AppNeuronsHeaderIcons";
+import AppHomeNeuronsWelcomeBox from "./AppNeuronsWelcomeBox";
 
 const AppHomeNeuronSection: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md")); // Use theme breakpoints for better responsiveness
+
   return (
     <Stack
       direction="column"
       alignItems="center"
       gap={{ xs: 0, md: 4 }}
-      py={4}
+      pb={4}
       spacing={4}
       sx={{
         height: { xs: "auto", md: "100vh" },
-        justifyContent: { xs: "flex-start", md: "space-around" },
+        justifyContent: "flex-start",
       }}
     >
-      <Typography
+      {/* <Typography
         variant="h1"
         sx={{
           fontSize: { xs: "1.5rem", md: "2rem", lg: "2.7rem", xl: "3.5rem" },
-          color: "primary.main",
+          color: "textPrimary.main",
           textAlign: "center",
           textShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
         }}
       >
         Dobrodošli na mjesto priča, misli i istraživanja <br /> o onome što nas
         čini povezanima – i ljudima.
-      </Typography>
+      </Typography> */}
+
+      <AppNeuronsHeaderIcons />
+
+      {/* Only for mobile view */}
+      {isMobile && <AppHomeNeuronsWelcomeBox />}
 
       <Grid
         container
@@ -39,7 +57,8 @@ const AppHomeNeuronSection: React.FC = () => {
         justifyContent={"space-between"}
         alignContent={"space-between"}
         width={"100%"}
-        py={{ xs: 9, md: 0 }}
+        pb={{ xs: 9, md: 0 }}
+        pt={{ xs: 9, md: 2, xl: 10 }}
         sx={{
           height: { xs: "100%", md: "auto" },
         }}
@@ -54,37 +73,7 @@ const AppHomeNeuronSection: React.FC = () => {
             display: { xs: "none", md: "flex" },
           }}
         >
-          <Box
-            component={"div"}
-            onClick={() => {
-              const linkElement = document.getElementById("new-posts-link");
-              linkElement?.click();
-            }}
-            sx={{
-              ...opacityActiveStyles,
-              backgroundColor: "quotesPink.main",
-              borderRadius: "20px",
-              padding: { xs: ".8rem", sm: "1rem", md: "1.5rem" },
-              boxShadow: "3px 5px 13px -4px rgba(0,0,0,1)",
-              transition: "box-shadow 0.3s ease-in-out",
-              cursor: "pointer",
-            }}
-          >
-            <Typography
-              variant="h3"
-              sx={{
-                fontSize: { xs: "18px", sm: "21px", md: "28px" },
-              }}
-            >
-              <Link
-                id="new-posts-link"
-                href={"/najnoviji-postovi"}
-                underline="none"
-              >
-                Najnoviji postovi
-              </Link>
-            </Typography>
-          </Box>
+          <AppHomeNeuronsWelcomeBox />
         </Grid>
 
         <Grid
@@ -111,7 +100,7 @@ const AppHomeNeuronSection: React.FC = () => {
           <AppQuotes title="CONNECTION." author="BRENE BROWN">
             <Typography
               variant="body1"
-              sx={{ maxWidth: "600px", mx: "auto", color: "primary.main" }}
+              sx={{ maxWidth: "600px", mx: "auto", color: "textPrimary.main" }}
             >
               The energy that exists between people when they feel{" "}
               <Box
@@ -120,7 +109,7 @@ const AppHomeNeuronSection: React.FC = () => {
               >
                 <Typography
                   variant="body1Quotes"
-                  color="primary.main"
+                  color="textPrimary.main"
                   sx={{ fontWeight: "bold" }}
                 >
                   seen
@@ -133,7 +122,7 @@ const AppHomeNeuronSection: React.FC = () => {
               >
                 <Typography
                   variant="body1Quotes"
-                  color="primary.main"
+                  color="textPrimary.main"
                   sx={{ fontWeight: "bold" }}
                 >
                   valued
@@ -146,7 +135,7 @@ const AppHomeNeuronSection: React.FC = () => {
               >
                 <Typography
                   variant="body1Quotes"
-                  color="primary.main"
+                  color="textPrimary.main"
                   sx={{ fontWeight: "bold" }}
                 >
                   heard

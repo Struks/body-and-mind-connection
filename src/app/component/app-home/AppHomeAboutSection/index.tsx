@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Grid2 as Grid, Link } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import AppContactLink from "./AppContactLink";
 import AppAbout from "./AppAbout";
 import AppQuotes from "../AppHomeNeuronsSection/AppQuotes";
@@ -11,7 +11,7 @@ const AppHomeAboutSection = () => {
       alignItems="center"
       spacing={{ xs: 4, md: 8, xl: 12 }}
     >
-      <Typography variant="h2" color="primary.main">
+      <Typography variant="h2" color="textPrimary.main">
         O meni
       </Typography>
 
@@ -69,7 +69,7 @@ const AppHomeAboutSection = () => {
       </Box>
 
       {/* Only for mobile */}
-      <Box component="div" display={{ xs: "block", md: "none" }}>
+      {/* <Box component="div" display={{ xs: "block", md: "none" }}>
         <Box
           component={"div"}
           onClick={() => {
@@ -101,7 +101,7 @@ const AppHomeAboutSection = () => {
             </Link>
           </Typography>
         </Box>
-      </Box>
+      </Box> */}
     </Stack>
   );
 };

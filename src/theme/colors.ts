@@ -7,6 +7,7 @@
 
 const colors = {
     primary: '#53679B', // trueBlue
+    primaryText: '#3D3D68', // custom primary text color
     secondary: '#6E7FAB', // glaucous
     background: '#FFFFFF', // white
     quotesPink: '#f0dfe9', // custom quotes pink color

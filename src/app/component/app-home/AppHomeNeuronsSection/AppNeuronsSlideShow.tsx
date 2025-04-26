@@ -1,21 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, useMediaQuery, useTheme, Typography, Link } from "@mui/material";
 import opacityActiveStyles from "@/theme/opacityActiveStyles";
+import styles from "./AppNeurons.module.css";
 
 // Prethodno izračunate pozicije za 5 neurona
-const calculatePositions = (radius: number) => {
-  const positions = [];
-  for (let i = 0; i < 5; i++) {
-    const angle = (i * 360) / 5;
-    const x = radius * Math.cos((angle * Math.PI) / 180);
-    const y = radius * Math.sin((angle * Math.PI) / 180);
-    positions.push({ x, y });
-  }
-  return positions;
-};
+// const calculatePositions = (radius: number) => {
+//   const positions = [];
+//   for (let i = 0; i < 5; i++) {
+//     const angle = (i * 360) / 5;
+//     const x = radius * Math.cos((angle * Math.PI) / 180);
+//     const y = radius * Math.sin((angle * Math.PI) / 180);
+//     positions.push({ x, y });
+//   }
+//   return positions;
+// };
 
 const AppNeuronsSlideShow = () => {
   //* Responsive design
@@ -65,6 +66,8 @@ const AppNeuronsSlideShow = () => {
 
   const [isTextVisible, setIsTextVisible] = useState(false); // Podesava da li je tekst vidljiv
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   // * Mounted
   useEffect(() => {
     if (typeof window === "undefined") return; // Proverava da li je kod na klijentskoj strani
@@ -79,7 +82,14 @@ const AppNeuronsSlideShow = () => {
       }
     }, 16);
 
-    return () => clearInterval(interval);
+    setIsLoaded(true); // Postavlja isLoaded na true kada se komponenta učita
+    setTimeout(() => {
+      setIsTextVisible(true); // Postavlja isTextVisible na true kada se komponenta učita
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   // * Methods
@@ -191,10 +201,7 @@ const AppNeuronsSlideShow = () => {
           // Dobijanje pozicije za svaki od 5 neurona u odnosu na centar slidera (slike)
           const { x, y } = getRandomPosition(index, isHover);
 
-          // // ugao za korekciju naslova i slike
-          // const negativeAngle = -getCircleGlobalAngle(0, sliderAngle);
-
-          const hoverNeuronSize = isMobile ? 110 : 160;
+          const hoverNeuronSize = isMobile ? 110 : 140;
           const noHoverNeuronSize = isMobile ? 70 : 100;
 
           return (
@@ -202,44 +209,51 @@ const AppNeuronsSlideShow = () => {
               key={index}
               href={item.link}
               underline="none"
+              className={`${styles.neuron} ${
+                isLoaded ? styles.neuronLoaded : ""
+              }`}
               onMouseEnter={() => setHoverIndex(index)} // Setuje hover indeks
               onMouseLeave={() => setHoverIndex(null)} // Resetuje kada miš izađe
-              onAnimationEnd={() => setIsTextVisible(true)} // Prikazuje tekst kada se animacija završi
               sx={{
                 ...opacityActiveStyles,
                 position: "absolute",
-                width: 5, // Initial small size
-                height: 5, // Initial small size
+                width: noHoverNeuronSize, // Initial small size
+                height: noHoverNeuronSize, // Initial small size
                 borderRadius: "50%",
                 backgroundColor: "primary.main",
-                animation: `moveOut 2s ease-out forwards ${(index + 1) * 0.2}s`,
                 "--x": `${x}px`,
                 "--y": `${y}px`,
-                "--size": `${noHoverNeuronSize}px`,
-
-                // transition: "width 0.5s ease-in-out, height 0.5s ease-in-out",
+                transition: "all 2s ease-in-out",
                 padding: 0.5,
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                // backgroundImage: isInRange ? `url(${item.image})` : "none",
                 backgroundSize: "cover",
                 "&:hover": {
                   backgroundColor: "secondary.main",
-                  "--size": `${hoverNeuronSize}px`,
+                  transition: "all 0.3s ease-in-out",
+
+                  width: hoverNeuronSize, // Initial small size
+                  height: hoverNeuronSize, // Initial small size
+                  "& > *": {
+                    fontSize: "120%",
+                    transition: "font-size 0.3s ease-in-out", // Added transition for font size
+                  },
                 },
               }}
             >
               <Typography
                 fontWeight={700}
                 // fontSize={{ xs: ".6rem", md: "init" }}
-                variant={isHover ? "h6" : "body2"}
+                // variant={isHover ? "h6" : "body2"}
+                variant="bodyNeurons"
                 color="#fff"
                 sx={{
                   transform: `rotate(${-sliderAngle}deg)`,
                   textTransform: "uppercase",
-                  opacity: isTextVisible ? 1 : 0,
-                  transition: "opacity 0.5s ease-in-out",
+                  opacity: !isTextVisible ? 0 : 1,
+                  transition:
+                    "font-size  2s ease-in-out, opacity .5s ease-in-out",
                 }}
               >
                 {item.name}

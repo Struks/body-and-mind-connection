@@ -65,24 +65,6 @@ a {
   }
 }
 
-@keyframes negativeRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-@keyframes moveOut {
-  0% {
-    transform: translate(0px, 0px);
-    width: 5px; /* Initial small size */
-    height: 5px; /* Initial small size */
-  }
-  100% {
-    transform: translate(var(--x), var(--y));
-    width: var(--size); /* Final size */
-    height: var(--size); /* Final size */
-  }
-}
+/* .swing-on-hover:hover {
+  animation: swing 0.6s ease-in-out;
+} */

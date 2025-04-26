@@ -21,7 +21,7 @@ const AppAbout = () => {
   };
 
   return (
-    <Box>
+    <Box component={"div"}>
       <Box
         component="div"
         sx={{

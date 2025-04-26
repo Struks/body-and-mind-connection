@@ -22,9 +22,9 @@ const AppAboutTextMobile = () => {
     >
       <Typography
         variant="body1"
-        pl={{ xs: 0, md: 3 }}
-        pr={{ xs: 0, md: 3 }}
-        pt={{ xs: 0, md: 3 }}
+        pl={0}
+        pr={0}
+        pt={0}
         fontWeight={500}
         color="primary.main"
         sx={{
@@ -39,32 +39,32 @@ const AppAboutTextMobile = () => {
         stvaranja, povezivanja sa ljudima i istraživanja svega što me inspiriše.
       </Typography>
 
+      <Typography
+        variant="body1"
+        pl={0}
+        pr={0}
+        fontWeight={500}
+        pt={2}
+        color="primary.main"
+        sx={{
+          width: { xs: "100%", md: "85%" },
+          marginLeft: { xs: "0", md: "auto" },
+          backgroundColor: { xs: "none", md: "quotesPink.main" },
+        }}
+      >
+        {/* Ostatak teksta */}
+        Integrativna tjelesna psihoterapija mi je otvorila novi svijet
+        razumijevanja uma i tijela, a učenje i lični razvoj su mi stalna
+        potreba. Fascinira me način na koji se svijet u nama i oko nas
+        neprestano mijenja, kako tijelo pamti, kako emocije putuju, kako se sve
+        na kraju nekako složi na svoje mjesto.
+      </Typography>
+
       <Collapse in={showMore} timeout="auto" unmountOnExit>
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
-          fontWeight={500}
-          pt={2}
-          color="primary.main"
-          sx={{
-            width: { xs: "100%", md: "85%" },
-            marginLeft: { xs: "0", md: "auto" },
-            backgroundColor: { xs: "none", md: "quotesPink.main" },
-          }}
-        >
-          {/* Ostatak teksta */}
-          Integrativna tjelesna psihoterapija mi je otvorila novi svijet
-          razumijevanja uma i tijela, a učenje i lični razvoj su mi stalna
-          potreba. Fascinira me način na koji se svijet u nama i oko nas
-          neprestano mijenja, kako tijelo pamti, kako emocije putuju, kako se
-          sve na kraju nekako složi na svoje mjesto.
-        </Typography>
-
-        <Typography
-          variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
           fontWeight={500}
           pt={2}
           color="primary.main"
@@ -75,14 +75,15 @@ const AppAboutTextMobile = () => {
           }}
         >
           Volim procese, volim kada stvari rastu i razvijaju se, bilo da je to
-          ideja, projekat ili odnos. Vjerujem u mogućnost promjena, u to da je
-          život pun prilika, čak i kada se čini da su stvari u tišini.
+          ideja, projekat ili odnos. Najviše volim kada mogu da budem svoja,
+          onako skroz – bez maske, bez potrebe da budem nešto drugo osim onoga
+          što jesam.
         </Typography>
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
           fontWeight={500}
           color="primary.main"
           sx={{
@@ -95,8 +96,8 @@ const AppAboutTextMobile = () => {
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
           fontWeight={500}
           color="primary.main"
           sx={{
@@ -109,8 +110,8 @@ const AppAboutTextMobile = () => {
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
           fontWeight={500}
           color="primary.main"
           sx={{
@@ -123,8 +124,8 @@ const AppAboutTextMobile = () => {
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
           fontWeight={500}
           pt={2}
           color="primary.main"
@@ -138,8 +139,24 @@ const AppAboutTextMobile = () => {
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
+          pt={2}
+          fontWeight={500}
+          color="primary.main"
+          sx={{
+            backgroundColor: { xs: "none", md: "quotesPink.main" },
+          }}
+        >
+          Vjerujem u mogućnost promjena, u to da je život pun prilika, čak i
+          kada se čini da su stvari u tišini.
+        </Typography>
+
+        <Typography
+          variant="body1"
+          pl={0}
+          pr={0}
+          pt={2}
           fontWeight={500}
           color="primary.main"
           sx={{
@@ -152,27 +169,9 @@ const AppAboutTextMobile = () => {
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
           fontWeight={500}
-          color="primary.main"
-          sx={{
-            backgroundColor: { xs: "none", md: "quotesPink.main" },
-          }}
-        >
-          Najviše volim kada mogu da budem svoja, onako skroz –bez maske, bez
-          potrebe da budem nešto drugo osim onoga što jesam. I kada mogu da se
-          izgubim u nečemu što me istinski pokreće. Nekada je to razgovor,
-          nekada knjiga ili jednostavno trenutak kada se potpuno prepustim
-          nečemu što me pokreće.
-        </Typography>
-
-        <Typography
-          variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
-          fontWeight={500}
-          pt={2}
           color="primary.main"
           sx={{
             backgroundColor: { xs: "none", md: "quotesPink.main" },
@@ -184,13 +183,13 @@ const AppAboutTextMobile = () => {
           sebi. To ne znači da sam uvijek sigurna u sebe – naprotiv. Smatram da
           ne postoji ništa autentičnije od trenutaka kada pokažeš svoju
           ranjivost. Kada se otvoriš pred nekim, pustiš da se vide tvoje
-          nesigurnosti, strahovi, snovi.
+          nesigurnosti, strahovi, snovi…
         </Typography>
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
           fontWeight={500}
           pt={2}
           color="primary.main"
@@ -202,30 +201,45 @@ const AppAboutTextMobile = () => {
           pronalazim smisao. Kada stvarno stanemo jedni pred druge, bez igara i
           očekivanja, dešava se nešto važno. To nisu uvijek laki susreti, jer
           povezivanje traži hrabrost, traži da budemo ranjivi. Ali upravo u toj
-          ranjivosti leži prava bliskost. Nekada je to dugačak razgovor u kojem
-          se prepoznamo, nekada samo pogled ili tišina koja kaže sve. To znači
-          dati sebi prostor da budem iskrena, nesavršena, živa.
+          ranjivosti leži prava bliskost.
         </Typography>
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
+          fontWeight={500}
+          pt={2}
+          color="primary.main"
+          sx={{
+            backgroundColor: { xs: "none", md: "quotesPink.main" },
+          }}
+        >
+          A povezati se sa sobom - to je tek putovanje. Slaganje svih djelova
+          sebe, prihvatanje svjetla i sjenki, dopuštanje sebi da budemo u miru
+          sa sobom, čak i kada ne znamo tačno gdje idemo.
+        </Typography>
+
+        <Typography
+          variant="body1"
+          pl={0}
+          pr={0}
           fontWeight={500}
           color="primary.main"
           sx={{
             backgroundColor: { xs: "none", md: "quotesPink.main" },
           }}
         >
-          Verujem da, kada smo uistinu povezani sa sobom, tada možemo najdublje
-          i najiskrenije da se povežemo i sa drugima.
+          Kada smo uistinu povezani sa sobom, tada možemo najdublje i
+          najiskrenije da se povežemo i sa drugima.
         </Typography>
 
         <Typography
           variant="body1"
-          pl={{ xs: 0, md: 3 }}
-          pr={{ xs: 0, md: 3 }}
-          pb={{ xs: 0, md: 3 }}
+          pl={0}
+          pr={0}
+          pb={0}
+          pt={2}
           fontWeight={500}
           color="primary.main"
           sx={{
@@ -234,7 +248,7 @@ const AppAboutTextMobile = () => {
             borderBottomLeftRadius: "12px",
           }}
         >
-          Vjerujem da baš u tom procesu leži prava snaga, jer tek kada zagrlimo
+          Vjerujem da baš u tom procesu leži prava snaga, jer tek kada prigrlimo
           sve djelove sebe, možemo da ih ponudimo svijetu bez straha.
         </Typography>
       </Collapse>

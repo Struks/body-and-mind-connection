@@ -5,6 +5,7 @@ import { Box, Container, Stack } from "@mui/material";
 //* Custom components
 import AppHomeNeuronsSection from "./component/app-home/AppHomeNeuronsSection";
 import AppHomeAboutSection from "./component/app-home/AppHomeAboutSection";
+import AppFooter from "./component/AppFooter";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         sx={{
           textAlign: "center",
           overflow: "hidden",
+          pt: 4,
         }}
       >
         <Stack direction="column" spacing={{ xs: 2, md: 9 }}>
@@ -38,6 +40,7 @@ export default function Home() {
 
           <AppHomeAboutSection />
         </Stack>
+        <AppFooter />
       </Container>
     </Box>
   );

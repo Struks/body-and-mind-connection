@@ -18,26 +18,33 @@ import colors from './colors';
 declare module '@mui/material/styles' {
     interface Palette {
         quotesPink: Palette['primary'];
+        link: Palette['primary'];
+        border: Palette['primary'];
     }
     interface PaletteOptions {
         quotesPink?: PaletteOptions['primary'];
+        link?: PaletteOptions['primary'];
+        border?: PaletteOptions['primary'];
     }
 
     interface TypographyVariants {
         body1Quotes: React.CSSProperties;
+        bodyNeurons: React.CSSProperties;
     }
 
     interface TypographyVariantsOptions {
         body1Quotes: React.CSSProperties;
+        bodyNeurons: React.CSSProperties;
     }
 }
 
 declare module '@mui/material/Typography' {
     interface TypographyPropsVariantOverrides {
         body1Quotes: true;
+        bodyNeurons: true;
     }
 }
-import { TypographyOptions } from '@mui/material/styles/createTypography';
+// import { TypographyOptions } from '@mui/material/styles/createTypography';
 
 
 
@@ -78,6 +85,14 @@ let defaultTheme = createTheme({
             fontFamily: dancingScript.style.fontFamily,
             fontSize: '150%',
         },
+        bodyNeurons: {
+            // fot desktop is same size like body2, but fo mobile is smaller
+            fontFamily: montserrat.style.fontFamily,
+            fontSize: '.9rem',
+            '@media (max-width: 600px)': {
+                fontSize: '.6rem',
+            },
+        } as React.CSSProperties,
     },
 
     palette: {
@@ -96,6 +111,12 @@ let defaultTheme = createTheme({
         text: {
             primary: colors.textPrimary,
             secondary: colors.textSecondary,
+        },
+        link: {
+            main: colors.link,
+        },
+        border: {
+            main: colors.border,
         },
         error: {
             main: colors.error,

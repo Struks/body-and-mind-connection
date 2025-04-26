@@ -65,8 +65,9 @@ const AppAboutTextDesktop = () => {
         }}
       >
         Volim procese, volim kada stvari rastu i razvijaju se, bilo da je to
-        ideja, projekat ili odnos. Vjerujem u mogućnost promjena, u to da je
-        život pun prilika, čak i kada se čini da su stvari u tišini.
+        ideja, projekat ili odnos. Najviše volim kada mogu da budem svoja, onako
+        skroz – bez maske, bez potrebe da budem nešto drugo osim onoga što
+        jesam.
       </Typography>
 
       <Typography
@@ -130,6 +131,22 @@ const AppAboutTextDesktop = () => {
         variant="body1"
         pl={3}
         pr={3}
+        pt={2}
+        fontWeight={500}
+        color="primary.main"
+        sx={{
+          backgroundColor: { xs: "none", md: "quotesPink.main" },
+        }}
+      >
+        Vjerujem u mogućnost promjena, u to da je život pun prilika, čak i kada
+        se čini da su stvari u tišini.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        pl={3}
+        pr={3}
+        pt={2}
         fontWeight={500}
         color="primary.main"
         sx={{
@@ -150,31 +167,13 @@ const AppAboutTextDesktop = () => {
           backgroundColor: { xs: "none", md: "quotesPink.main" },
         }}
       >
-        Najviše volim kada mogu da budem svoja, onako skroz –bez maske, bez
-        potrebe da budem nešto drugo osim onoga što jesam. I kada mogu da se
-        izgubim u nečemu što me istinski pokreće. Nekada je to razgovor, nekada
-        knjiga ili jednostavno trenutak kada se potpuno prepustim nečemu što me
-        pokreće.
-      </Typography>
-
-      <Typography
-        variant="body1"
-        pl={3}
-        pr={3}
-        fontWeight={500}
-        pt={2}
-        color="primary.main"
-        sx={{
-          backgroundColor: { xs: "none", md: "quotesPink.main" },
-        }}
-      >
         Autentičnost za mene znači slobodu. Slobodu da budem nježna i snažna u
         isto vrijeme, da budem tiha kada osjećam da je tišina potrebna, da budem
         iskrena i odvažna kada osjećam potrebu da kažem ono što nosim u sebi. To
         ne znači da sam uvijek sigurna u sebe – naprotiv. Smatram da ne postoji
         ništa autentičnije od trenutaka kada pokažeš svoju ranjivost. Kada se
         otvoriš pred nekim, pustiš da se vide tvoje nesigurnosti, strahovi,
-        snovi.
+        snovi…
       </Typography>
 
       <Typography
@@ -192,9 +191,23 @@ const AppAboutTextDesktop = () => {
         pronalazim smisao. Kada stvarno stanemo jedni pred druge, bez igara i
         očekivanja, dešava se nešto važno. To nisu uvijek laki susreti, jer
         povezivanje traži hrabrost, traži da budemo ranjivi. Ali upravo u toj
-        ranjivosti leži prava bliskost. Nekada je to dugačak razgovor u kojem se
-        prepoznamo, nekada samo pogled ili tišina koja kaže sve. To znači dati
-        sebi prostor da budem iskrena, nesavršena, živa.
+        ranjivosti leži prava bliskost.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        pl={3}
+        pr={3}
+        fontWeight={500}
+        pt={2}
+        color="primary.main"
+        sx={{
+          backgroundColor: { xs: "none", md: "quotesPink.main" },
+        }}
+      >
+        A povezati se sa sobom - to je tek putovanje. Slaganje svih djelova
+        sebe, prihvatanje svjetla i sjenki, dopuštanje sebi da budemo u miru sa
+        sobom, čak i kada ne znamo tačno gdje idemo.
       </Typography>
 
       <Typography
@@ -207,8 +220,8 @@ const AppAboutTextDesktop = () => {
           backgroundColor: { xs: "none", md: "quotesPink.main" },
         }}
       >
-        Verujem da, kada smo uistinu povezani sa sobom, tada možemo najdublje i
-        najiskrenije da se povežemo i sa drugima.
+        Kada smo uistinu povezani sa sobom, tada možemo najdublje i najiskrenije
+        da se povežemo i sa drugima.
       </Typography>
 
       <Typography
@@ -216,6 +229,7 @@ const AppAboutTextDesktop = () => {
         pl={3}
         pr={3}
         pb={3}
+        pt={2}
         fontWeight={500}
         color="primary.main"
         sx={{
@@ -224,7 +238,7 @@ const AppAboutTextDesktop = () => {
           borderBottomLeftRadius: "12px",
         }}
       >
-        Vjerujem da baš u tom procesu leži prava snaga, jer tek kada zagrlimo
+        Vjerujem da baš u tom procesu leži prava snaga, jer tek kada prigrlimo
         sve djelove sebe, možemo da ih ponudimo svijetu bez straha.
       </Typography>
     </Box>
