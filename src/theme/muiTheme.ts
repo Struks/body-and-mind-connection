@@ -126,6 +126,17 @@ let defaultTheme = createTheme({
             main: colors.success,
         },
     },
+    shadows: [
+        "none",
+        "0px 1px 3px rgba(0,0,0,0.12), 0px 1px 1px rgba(0,0,0,0.14), 0px 2px 1px rgba(0,0,0,0.20)",
+        "0px 1.5px 5px rgba(0,0,0,0.13), 0px 2px 2px rgba(0,0,0,0.15), 0px 3px 2px rgba(0,0,0,0.22)",
+        "0px 2px 8px rgba(0,0,0,0.14), 0px 3px 4px rgba(0,0,0,0.16), 0px 4px 3px rgba(0,0,0,0.24)",
+        "0px 3px 10px rgba(0,0,0,0.15), 0px 4px 5px rgba(0,0,0,0.17), 0px 5px 4px rgba(0,0,0,0.26)",
+        "0px 4px 14px rgba(0,0,0,0.16), 0px 5px 6px rgba(0,0,0,0.18), 0px 6px 5px rgba(0,0,0,0.28)",
+        "0px 8px 24px rgba(0,0,0,0.18)", // custom shadow for index 6
+        "none", "none", "none", "none", "none", "none", "none", "none", "none", "none",
+        "none", "none", "none", "none", "none", "none", "none", "none"
+    ],
     components: {
         MuiButton: {
             styleOverrides: {
