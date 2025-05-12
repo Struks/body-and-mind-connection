@@ -30,31 +30,31 @@ const AppNeuronsSlideShow = () => {
   const data = [
     {
       name: "Blog",
-      link: "https://www.google.com",
+      link: "/price/blog",
       color: "primary.main",
       image: "/assets/images/logo-plava.png",
     },
     {
       name: "Resursi",
-      link: "https://www.google.com",
+      link: "/price/resursi",
       color: "secondary.main",
       image: "/assets/images/logo-plavo-bijela.png",
     },
     {
       name: "Psiho-terapija",
-      link: "https://www.google.com",
+      link: "/price/psihoterapija",
       color: "primary.main",
       image: "/assets/images/logo-plava.png",
     },
     {
       name: "Putovanja",
-      link: "https://www.google.com",
+      link: "/price/putovanja",
       color: "secondary.main",
       image: "/assets/images/logo-plavo-bijela.png",
     },
     {
       name: "Intro-spekcije",
-      link: "https://www.google.com",
+      link: "/price/introspekcije",
       color: "primary.main",
       image: "/assets/images/logo-plava.png",
     },

@@ -55,7 +55,6 @@ const HoverCard = styled(Card)(({ theme }) => ({
   overflow: "hidden",
   borderRadius: theme.spacing(2),
   cursor: "pointer",
-  height: "400px",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   "&:hover": {
     transform: "scale(1.02)",
@@ -97,8 +96,7 @@ const ReadMore = styled(Button)({
   bottom: 16,
   right: 16,
   zIndex: 2,
-  backgroundColor: "#fff",
-  color: "#000",
+  backgroundColor: "#f0dfe9",
   opacity: 0,
   transform: "translateY(20px)",
   transition: "all 0.3s ease",
@@ -106,7 +104,7 @@ const ReadMore = styled(Button)({
 
 const BlogCard = ({ blogPost }: PropsType) => {
   return (
-    <HoverCard>
+    <HoverCard sx={{ height: { xs: 300, sm: 400 } }}>
       <TitleOnHover className="titleOnHover" variant="h6">
         {blogPost.name}
       </TitleOnHover>
@@ -154,8 +152,14 @@ const BlogCard = ({ blogPost }: PropsType) => {
           <Typography variant="body2">by {blogPost.name}</Typography>
         </Box>
       </CardContent>
-      <ReadMore className="readMore" size="small" variant="contained">
-        Read More
+
+      <ReadMore
+        className="readMore"
+        size="small"
+        variant="contained"
+        sx={{ textTransform: "none", backgroundColor: "#f0dfe9" }}
+      >
+        Pročitaj više
       </ReadMore>
     </HoverCard>
   );
